@@ -20,6 +20,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IntegratedSorting.py" />
     <Compile Include="PanarinaSortingProject.py" />
     <Compile Include="PanarinaSortingWorkspace.py" />
   </ItemGroup>
