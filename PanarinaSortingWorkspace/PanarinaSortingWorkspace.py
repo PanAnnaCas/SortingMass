@@ -1,30 +1,24 @@
-from PanarinaSortingProject import mass                                                     #
+from PanarinaSortingProject import mass                                                     #Ссылаемся на файл со вводом массива
                                                                                             #
-mas, n = mass()                                                                             #
+mas, n = mass()                                                                             #Вводим массив
 print ("\n \n Импорт данных прошел успешно. Ваш массив для сортировки выведен ниже \n" )    #
 i=0                                                                                         #
-while i<n:                                                                                  #
+while i<n:                                                                                  #Выводим на экран массив для сортировки
     print (mas[i], "\n")                                                                    #
     i=i+1                                                                                   #
 y = 0
-while y<1 or y>5:                                                                           #
+while y<1 or y>3:                                                                           #Выбираем способ сортировки
     print ("Как мы будем сортировать массив? \n")                                           #
     print ("1 - Быстрая сортировка \n")                                                     #
     print ("2 - Встроенная сортировка \n")                                                  #
     print ("3 - Вставкой \n")                                                               #
-    y = int(input ())                                                                       #
-mas1 = sorted(mas)
+    y = int(input ())                                                                       # 
+mas1 = []                                                                                   #
+for i in mas:                                                                               #
+    mas1 = [*mas1, *i]                                                                      #"выравниваем" двумерный массив                                                                                                                                                                                     #
+mas1 = sorted(mas1)                                                                         #Сортируем втроенной функцией одномерный массив
 i=0                                                                                         #
-while i<n:                                                                                  #
-    print (mas1[i], "\n")                                                                    #
-    i=i+1                                                                                   #
-i=0                                                                                            #
-
-while i<n:                                                                                  #
-    mas[i] = sorted(mas[i]) 
-    i=i+1                                                                                   #
-mas = sorted(mas)
-i=0                                                                                         #
-while i<n:                                                                                  #
-    print (mas[i], "\n")                                                                    #
-    i=i+1                                                                                   #
+for i in range (n):                                                                         #Делим одномерный массив на срочки двумерного
+    mas[i] = mas1[i*n:i*n+n: 1]                                                             #
+for mas in mas:                                                                             #
+    print (mas)                                                                             #
