@@ -1,4 +1,6 @@
 def sortinginteg(mas, n):    
+    import time
+    time1 = time.time()
     mas1 = []                                              #
     for i in mas:                                          #
         mas1 = [*mas1, *i]                                 #"выравниваем" двумерный массив                                                                                                                                                                                     #
@@ -8,4 +10,7 @@ def sortinginteg(mas, n):
         mas[i] = mas1[i*n:i*n+n: 1]                        #
  #   for mas2 in mas:                                       #Выводим двумерный массив
  #       print (mas2)                                       #
-    return mas 
+ 
+    time2 = time.time()
+    t = time2 - time1
+    return mas, t
