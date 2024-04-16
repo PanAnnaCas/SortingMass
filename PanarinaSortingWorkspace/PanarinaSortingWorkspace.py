@@ -12,14 +12,14 @@ while y:                                                                        
     if y==0: break
     elif y==1: 
         print ("You've chosen quiksort")
-        mas, t = qwicksort (mas, n)
+        mass, t1 = qwicksort (mas, n)
         break
     elif y==2: 
-        mas, t = sortinginteg(mas, n)
+        mass, t2 = sortinginteg(mas, n)
         break
     elif y==3: 
         print ("You've chosen вставку")
-        mas, t = insertion(mas, n)
+        mass, t3 = insertion(mas, n)
         break
     else:     
         print ("Выберите один из вариантов: \n")                                           
@@ -29,8 +29,12 @@ while y:                                                                        
         print ("0 - Выйти из программы \n")
         y = int(input ())
 print ("\n Отсортированный массив: \n")
-for mas1 in mas:                                                                         #Вывод отсортированного массива
+for mas2 in mass:                                                                         #Вывод отсортированного массива
     for mas0 in mas1:    
         print (f'{mas0:4}', end = "|")
     print ("\n")
-print ("\n Время выполнения: ", t)
+
+print ("\n Время выполнения: ", t1+t2+t3)
+print ("\n Время выполнения быстрой сортировки: ", t1)
+print ("\n Время выполнения встроенной сортировки: ", t2)
+print ("\n Время выполнения сортировки вставкой: ", t3)
